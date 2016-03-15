@@ -1,6 +1,6 @@
 {
   "name": "download-repo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Download github repo with ease.",
   "license": "MIT",
   "repository": "egoist/download-repo",
