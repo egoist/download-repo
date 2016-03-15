@@ -23,7 +23,7 @@ module.exports = co.wrap(function* (repo, opts) {
   const url = `https://github.com/${repo}/archive/${tag}.zip`
 
   const dir = yield tempDir()
-  yield pget(url, {target: `${destName}.zip`, dir, quiet: options.quiet})
+  yield pget(url, {target: `${destName}.zip`, dir, quiet: opts.quiet})
   const source = `${dir}/${destName}.zip`
   yield pify(extract)(source, {dir})
   yield pify(mv)(`${dir}/${repoName}-${trim(tag)}`, path.join(destDir, destName))
