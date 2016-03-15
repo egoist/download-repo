@@ -67,7 +67,7 @@ The tag to download, will override `branch` if set.
 
 ##### quiet
 
-Type: `boolean`
+Type: `boolean`  
 Default: `false`
 
 Omit the progress bar when downloading.
