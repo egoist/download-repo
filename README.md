@@ -59,13 +59,13 @@ Default: `master`
 
 The branch to download.
 
-#### tag
+##### tag
 
 Type: `string`
 
 The tag to download, will override `branch` if set.
 
-### quiet
+##### quiet
 
 Type: `boolean`
 Default: `false`
