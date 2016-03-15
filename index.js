@@ -14,6 +14,10 @@ module.exports = co.wrap(function* (repo, opts) {
   const destDir = cwd(opts.dir || '')
   const destName = opts.target || repo.replace(/\//, '-')
 
+  // trim tag's `v` prefix
+  const trim = (tag) => opts.tag ? tag.substr(1) : tag
+
+  // parse repo's repoName
   const regexMatchRepo = /([^.]+)\/([^.]+)/
   const matchRepo = repo.match(regexMatchRepo)
   // const userName = matchRepo[1]
@@ -27,11 +31,4 @@ module.exports = co.wrap(function* (repo, opts) {
   const source = `${dir}/${destName}.zip`
   yield pify(extract)(source, {dir})
   yield pify(mv)(`${dir}/${repoName}-${trim(tag)}`, path.join(destDir, destName))
-
-  function trim(tag) {
-    if (opts.tag) {
-      return tag.substr(1)
-    }
-    return tag
-  }
 })
