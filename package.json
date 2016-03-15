@@ -1,0 +1,43 @@
+{
+  "name": "download-repo",
+  "version": "0.0.0",
+  "description": "Download github repo with ease.",
+  "license": "MIT",
+  "repository": "egoist/download-repo",
+  "author": {
+    "name": "EGOIST",
+    "email": "0x142857@gmail.com",
+    "url": "github.com/egoist"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "rm -rf temp* && xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "devDependencies": {
+    "ava": "latest",
+    "execa": "^0.2.2",
+    "path-exists": "^2.1.0",
+    "xo": "latest"
+  },
+  "xo": {
+    "semicolon": false,
+    "space": 2
+  },
+  "dependencies": {
+    "co": "^4.6.0",
+    "cwd": "^0.9.1",
+    "extract-zip": "^1.5.0",
+    "mv": "^2.1.1",
+    "pget": "^0.1.1",
+    "pify": "^2.3.0",
+    "tempdir": "^1.0.0"
+  }
+}
