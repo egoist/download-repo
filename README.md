@@ -72,6 +72,10 @@ Default: `false`
 
 Omit the progress bar when downloading.
 
+## Related
+
+- [download-repo-cli](https://github.com/egoist/download-repo-cli) - CLI of this module
+
 ## License
 
 MIT © [EGOIST](https://github.com/egoist)
